@@ -1,5 +1,5 @@
 const db = require("../models");
-const Users = db.users;
+const User = db.users;
 
 // Create and Save a new user
 exports.create = (req, res) => {
@@ -40,7 +40,7 @@ exports.create = (req, res) => {
 exports.findOne = (req, res) => {
   const id = req.params.id;
 
-  UserInfo.findById(id)
+  User.findById(id)
     .then(data => {
       if (!data)
         res.status(404).send({ message: `No user exists with id ${id}` });
@@ -64,7 +64,7 @@ exports.update = (req, res) => {
 
   const id = req.params.id;
 
-  Users.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  User.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
     .then(data => {
       if (!data) {
         res.status(404).send({
@@ -83,7 +83,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
   const id = req.params.id;
 
-  Users.findByIdAndRemove(id)
+  User.findByIdAndRemove(id)
     .then(data => {
       if (!data) {
         res.status(404).send({
