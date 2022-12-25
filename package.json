@@ -1,6 +1,6 @@
 {
   "name": "adacomp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -8,6 +8,8 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
     "discord-api-types": "^0.37.22",
     "express": "^4.18.2",
     "mongodb": "^4.12.1",
@@ -27,6 +29,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
+    "nodemon": "^2.0.20",
     "prettier": "^2.8.1"
   },
   "lint-staged": {
@@ -59,5 +62,29 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "An aid to reduce the amount of paperwork and time required to perform an ADA compliance inspection. This app increased productivity by 50%, with about 4 hours saved per inspection. This app was built on a MERN stack and ported to mobile using React Native.",
+  "main": "/server/server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GarlandKey/ADAcomp.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb",
+    "mongoose",
+    "rest",
+    "api",
+    "react"
+  ],
+  "author": "Garland Key <hello@garlandkey.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/GarlandKey/ADAcomp/issues"
+  },
+  "homepage": "https://github.com/GarlandKey/ADAcomp#readme"
 }
