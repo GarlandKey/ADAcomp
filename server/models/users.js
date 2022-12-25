@@ -1,12 +1,11 @@
 module.exports = mongoose => {
-    const userInfo = mongoose.model(
-      "userInfo",
+    const Users = mongoose.model(
+      "users",
       mongoose.Schema(
         {
           firstName: String,
           lastName: String,
           email: String,
-          userName: String,
           password: String,
           company: String || `none`
         },
@@ -14,6 +13,6 @@ module.exports = mongoose => {
       )
     );
   
-    return userInfo;
+    return Users;
   };
   
