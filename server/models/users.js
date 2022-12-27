@@ -3,11 +3,19 @@ module.exports = mongoose => {
       "users",
       mongoose.Schema(
         {
-          firstName: String,
-          lastName: String,
+          first: String,
+          middle: String,
+          last: String,
+          title: String,
+          role: String,
+          company: String,
+          address: String,
+          city: String,
+          state: String,
+          zip: String,
+          phone: String,
           email: String,
-          password: String,
-          company: String || `none`
+          other: String
         },
         { timestamps: true }
       )

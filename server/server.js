@@ -5,7 +5,6 @@ require("dotenv").config({ path: "config/.env" });
 const PORT = process.env.PORT || 8080;
 const app = express();
 const db = require("./models/index.js");
-
 let corsOptions = {
   origin: `${process.env.MONGO_SERVER}`
 };

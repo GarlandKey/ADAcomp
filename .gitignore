@@ -115,6 +115,5 @@ dist
 
 # Miscellaneous
 .DS_Store
-
-$ Research folder
+# Research folder
 docs/
