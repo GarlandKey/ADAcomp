@@ -13,6 +13,8 @@ I started by building a detailed prototype using Figma. The I broke down the pro
 
 When the MVP was complete, I noticed some inefficiencies in the API that needed to be adjusted. I was storing information in the database that wasn't necessary and could be handled directly by the server. The result was a major decrease in data transfer to and from the database which saved money for the client.
 
+In the near future, I will be porting this to iOS and Android with the help of React Native.
+
 ## Lessons Learned
 
 The process of taking on so many roles to design and develop this product on my own taught me that it's important to have structure and to thoroughly think things through and map out the work before you start writing code. If I had not done this, the quality of my product and the time invested would have suffered greatly.
