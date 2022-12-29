@@ -4,22 +4,26 @@ const User = db.users;
 // Create and Save a new user
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.firstName ||
-      !req.body.lastName ||
-      !req.body.email ||
-      !req.body.password
-      ) {
+  if (!req.body) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
 
   // Create a user
   const user = new User({
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    first: req.body.first,
+    middle: req.body.middle,
+    last: req.body.last,
+    title: req.body.title,
+    role: req.body.role,
+    company: req.body.company,
+    address: req.body.address,
+    city: req.body.city,
+    state: req.body.state,
+    zip: req.body.zip,
+    phone: req.body.phone,
     email: req.body.email,
-    password: req.body.password,
-    company: req.body.company
+    other: req.body.other
   });
 
   // Save user in the database
@@ -51,7 +55,6 @@ exports.findOne = (req, res) => {
         .status(500)
         .send({ message: `Error retrieving user with id ${id}` });
     });
-  };
 };
 
 // Update a user by the id in the request

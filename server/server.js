@@ -5,7 +5,6 @@ require("dotenv").config({ path: "config/.env" });
 const PORT = process.env.PORT || 8080;
 const app = express();
 const db = require("./models/index.js");
-
 let corsOptions = {
   origin: `${process.env.MONGO_SERVER}`
 };
@@ -35,6 +34,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.json({ message: `Welcome to ADAcomp!` });
 });
+
+require("./routes/forms.routes.js")(app);
+require("./routes/layouts.routes.js")(app);
+require("./routes/users.routes.js")(app);
 
 // listen for requests
 app.listen(PORT, () => {
