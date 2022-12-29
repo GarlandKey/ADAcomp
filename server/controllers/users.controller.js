@@ -4,11 +4,7 @@ const User = db.users;
 // Create and Save a new user
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.firstName ||
-      !req.body.lastName ||
-      !req.body.email ||
-      !req.body.password
-      ) {
+  if (!req.body) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
@@ -59,7 +55,6 @@ exports.findOne = (req, res) => {
         .status(500)
         .send({ message: `Error retrieving user with id ${id}` });
     });
-  };
 };
 
 // Update a user by the id in the request

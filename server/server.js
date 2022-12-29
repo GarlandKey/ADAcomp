@@ -35,6 +35,10 @@ app.get("/", (req, res) => {
   res.json({ message: `Welcome to ADAcomp!` });
 });
 
+require("./routes/forms.routes.js")(app);
+require("./routes/layouts.routes.js")(app);
+require("./routes/users.routes.js")(app);
+
 // listen for requests
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);

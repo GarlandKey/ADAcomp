@@ -1,34 +1,16 @@
 const db = require("../models");
-const PGLayout = db.pgLayouts;
+const Layout = db.pgLayouts;
 
 // Create and Save a page layout
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.user ||
-    !req.body.isVerticalLetterhead ||
-    !req.body.isHeaderImage ||
-    !req.body.headerImageLocation ||
-    !req.body.logoLocation ||
-    !req.body.logoCoordsX ||
-    !req.body.logoCoordsY ||
-    !req.body.companyCoordsX ||
-    !req.body.companyCoordsY ||
-    !req.body.addressCoordsX ||
-    !req.body.addressCoordsY ||
-    !req.body.phoneCoordsX ||
-    !req.body.phoneCoordsY ||
-    !req.body.emailCoordsX ||
-    !req.body.emailCoordsY ||
-    !req.body.otherCoordsX ||
-    !req.body.otherCoordsY ||
-    !req.body.signatureGreeting
-  ) {
+  if (!req.body) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
 
   // Create a page layout
-  const pgLayout = new pgLayout({
+  const layout = new Layout({
     user: req.body.user,
     isVerticalLetterhead: req.body.isVerticalLetterhead,
     isHeaderImage: req.body.isHeaderImage,
@@ -50,8 +32,8 @@ exports.create = (req, res) => {
   });
 
   // Save page layout in the database
-  pgLayout
-    .save(pgLayout)
+  layout
+    .save(layout)
     .then(data => {
       res.send(data);
     })
@@ -67,7 +49,7 @@ exports.create = (req, res) => {
 exports.findOne = (req, res) => {
   const id = req.params.id;
 
-  PGLayout.findById(id)
+  Layout.findById(id)
     .then(data => {
       if (!data)
         res.status(404).send({ message: `No page layouts exists with id ${id}` });
@@ -78,7 +60,6 @@ exports.findOne = (req, res) => {
         .status(500)
         .send({ message: `Error retrieving page layout with id ${id}` });
     });
-  };
 };
 
 // Update a page layout by the id in the request
@@ -91,7 +72,7 @@ exports.update = (req, res) => {
 
   const id = req.params.id;
 
-  PGLayout.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+  Layout.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
     .then(data => {
       if (!data) {
         res.status(404).send({
@@ -110,7 +91,7 @@ exports.update = (req, res) => {
 exports.delete = (req, res) => {
   const id = req.params.id;
 
-  PGLayout.findByIdAndRemove(id)
+  Layout.findByIdAndRemove(id)
     .then(data => {
       if (!data) {
         res.status(404).send({

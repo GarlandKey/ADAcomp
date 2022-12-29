@@ -1,21 +1,21 @@
 
 module.exports = app => {
-    const users = require("../controllers/users.controller.js");
+    const forms = require("../controllers/forms.controller.js");
   
     let router = require("express").Router();
   
-    // Create a new user
-    router.post("/", users.create);
+    // Create a new form
+    router.post("/", forms.create);
     
-    // Retrieve a single user with id
-    router.get("/:id", users.findOne);
+    // Retrieve a single form with id
+    router.get("/:id", forms.findOne);
   
-    // Update a user with id
-    router.put("/:id", users.update);
+    // Update a form with id
+    router.put("/:id", forms.update);
   
-    // Delete a user with id
-    router.delete("/:id", users.delete);
+    // Delete a form with id
+    router.delete("/:id", forms.delete);
   
-    app.use('/api/users', router);
+    app.use('/api/forms', router);
   };
   

@@ -4,20 +4,7 @@ const Form = db.forms;
 // Create and Save a new user
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.priority ||
-    !req.body.category ||
-    !req.body.num ||
-    !req.body.title ||
-    !req.body.description ||
-    !req.body.imgLocation ||
-    !req.body.isComp ||
-    !req.body.isMeasurement ||
-    !req.body.measurement ||
-    !req.body.hasPic ||
-    !req.body.picLocation ||
-    !req.body.suggestionLocation ||
-    !req.body.comment
-    ) {
+  if (!req.body) {
     res.status(400).send({ message: "Content can not be empty!" });
     return;
   }
@@ -33,7 +20,7 @@ exports.create = (req, res) => {
     isComp: req.body.isComp,
     isMeasurement: req.body.isMeasurement,
     measurement: req.body.measurement,
-    hasPic: Breq.body.hasPic,
+    hasPic: req.body.hasPic,
     picLocation: req.body.picLocation,
     suggestionLocation: req.body.suggestionLocation,
     comment: req.body.comment
@@ -68,7 +55,6 @@ exports.findOne = (req, res) => {
         .status(500)
         .send({ message: `Error retrieving form with id ${id}` });
     });
-  };
 };
 
 // Update a form by the id in the request

@@ -1,6 +1,6 @@
 module.exports = mongoose => {
-    const PGLayout = mongoose.model(
-      "pgLayout",
+    const Layout = mongoose.model(
+      "Layout",
       mongoose.Schema(
         {
           users: String,
@@ -26,6 +26,6 @@ module.exports = mongoose => {
       )
     );
   
-    return PGLayout;
+    return Layout;
   };
   
