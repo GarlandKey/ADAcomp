@@ -1,9 +1,10 @@
+import OAuth from '../OAuth/OAuth';
 import './TopNav.css';
 
 function TopNav() {
   return (
     <div className="TopNav">
-      <button>Sign-in / Sign-up</button>
+      <OAuth />
     </div>
   );
 }
