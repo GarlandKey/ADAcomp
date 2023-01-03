@@ -1,0 +1,13 @@
+.TopNav {
+  align-items: center;
+  background-color: #282c34;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 5rem;
+  justify-content: flex-end;
+  width: 100vw;
+}
+
+button {
+  margin-right: 0.5rem;
+}
