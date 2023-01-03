@@ -1,12 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-require("dotenv").config({ path: "config/.env" });
+require("dotenv").config({ path: "./server/config/.env" });
 const PORT = process.env.PORT || 8080;
 const app = express();
-const db = require("./models/index.js");
+const db = require("./server/models/index.js");
 let corsOptions = {
-  origin: `${process.env.MONGO_SERVER}`
+  origin: `${process.env.MONGO_URI}`
 };
 
 db.mongoose
@@ -35,9 +35,9 @@ app.get("/", (req, res) => {
   res.json({ message: `Welcome to ADAcomp!` });
 });
 
-require("./routes/forms.routes.js")(app);
-require("./routes/layouts.routes.js")(app);
-require("./routes/users.routes.js")(app);
+require("./server/routes/forms.routes.js")(app);
+require("./server/routes/layouts.routes.js")(app);
+require("./server/routes/users.routes.js")(app);
 
 // listen for requests
 app.listen(PORT, () => {

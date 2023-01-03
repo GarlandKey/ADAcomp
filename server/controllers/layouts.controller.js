@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../../server/models");
 const Layout = db.pgLayouts;
 
 // Create and Save a page layout
