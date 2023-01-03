@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../../server/models");
 const User = db.users;
 
 // Create and Save a new user
