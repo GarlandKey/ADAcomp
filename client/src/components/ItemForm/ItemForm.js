@@ -1,3 +1,4 @@
+import placeholder from './img/placeholder.webp';
 import './ItemForm.css';
 
 function ItemForm() {
@@ -13,9 +14,23 @@ function ItemForm() {
         No: <input type="checkbox" name="myCheckbox" />
       </label>
       <label>
-        Measurement: <input name="myInput" />
+        Location of route: <input name="location" />
       </label>
-      
+      <img src={placeholder} className="ItemFormIllustration" alt="illustration" />
+      <label>
+        Additional comments: <input className="ItemFormComments" name="comments" />
+      </label>
+      <label>
+        Possible solutions:
+        <ul>
+          <li>Add a ramp</li>
+          <li>Regrade to 1:20 maximum slope</li>
+          <li>Add a lift if site constraints prevent other solutions</li>
+        </ul>
+      </label>
+      <label>
+        Additional solutions: <input className="ItemFormSolutions" name="solutions" />
+      </label>
     </div>
   );
 }
