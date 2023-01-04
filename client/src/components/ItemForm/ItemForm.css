@@ -8,26 +8,29 @@
   width: 40rem;
 }
 
-.ItemFormComments {
+.ItemFormComments,
+.ItemFormSolutions {
   height:5rem;
 }
 
-h1 {
+button {
+  margin: 1rem;
+}
+
+h1,
+h2,
+label,
+p {
   padding-left: 1rem;
 }
 
-h2 {
-  padding-left: 1rem;
-}
 
 label {
   align-items: flex-start;
   display: flex;
   flex-flow: column nowrap;
-  padding-left: 1rem;
 }
 
 p {
   font-size: 1rem;
-  padding-left: 1rem;
 }
