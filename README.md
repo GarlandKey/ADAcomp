@@ -1,6 +1,8 @@
 # ADAcomp
 This app is an aid to reduce the amount of paperwork and time required to perform an ADA compliance inspection. This app increased productivity by 50%, with about 4 hours saved per inspection.
 
+<img src="https://raw.githubusercontent.com/GarlandKey/creative-content/main/adacomp-github-laptop-shot.webp">
+
 **Link to project:** [Live demo coming soon](https://github.com/GarlandKey/ADAcomp)
 
 ## How It's Made
