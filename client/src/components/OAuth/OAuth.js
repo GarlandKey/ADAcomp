@@ -1,9 +1,12 @@
 import './OAuth.css';
+import {Link} from "react-router-dom";
 
 function OAuth() {
   return (
     <div className="OAuth">
-      <button>Sign-in / Sign-up</button>
+      <Link to="/Point">
+        <button>Demo</button>
+      </Link>
     </div>
   );
 }

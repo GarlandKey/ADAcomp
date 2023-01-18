@@ -3,9 +3,9 @@
   background-color: #282c34;
   display: flex;
   flex-flow: row nowrap;
-  height: 5rem;
+  height: 4rem;
   justify-content: flex-end;
-  width: 100vw;
+  width: calc(100vw - (100vw - 100%));
 }
 
 button {

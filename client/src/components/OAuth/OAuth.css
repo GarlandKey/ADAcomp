@@ -1,5 +1,22 @@
 button {
-  border-radius: 0.5rem;
-  height: 4rem;
-  width: 10rem;
+  background: lightgray;
+  border: 0.5rem solid white;
+  border-radius: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 19rem; height: 7rem;
+}
+
+
+button:hover {
+  border: 0.5rem solid lightgray;
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+}
+
+
+button:active {
+  background: gray;
+  border: 0.5rem solid transparent;
+  border-radius: 0.8rem;
 }
