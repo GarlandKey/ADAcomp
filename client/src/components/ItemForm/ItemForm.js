@@ -31,6 +31,7 @@ function ItemForm() {
       <label>
         Additional solutions: <input className="ItemFormSolutions" name="solutions" />
       </label>
+      <button>Take Photo</button>
     </div>
   );
 }

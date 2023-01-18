@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './components/App/App';
-import reportWebVitals from './reportWebVitals';
-import ItemForm from './components/ItemForm/ItemForm';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Routes from "./routes/Routes";
+import reportWebVitals from "./reportWebVitals";
+import "./reset.css";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <ItemForm />
+    <Routes />
   </React.StrictMode>
 );
 
