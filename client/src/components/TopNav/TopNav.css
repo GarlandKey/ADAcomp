@@ -3,8 +3,8 @@
   background-color: #282c34;
   display: flex;
   flex-flow: row nowrap;
-  height: 4rem;
-  justify-content: flex-end;
+  height: 6.4rem;
+  justify-content: center;
   width: calc(100vw - (100vw - 100%));
 }
 
