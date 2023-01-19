@@ -74,12 +74,14 @@
 .PointNav li.listItem {
   color: white;
   font-size: 1.6rem;
-  height: 2.5rem;
+  height: 3.5rem;
+  padding: 1rem 0;
 }
 
 
 .PointNav li.listItem:hover {
   background: #3d424e;
   margin-left: -2rem;
+  padding: 1rem 0;
   padding-left: 2rem;
 }

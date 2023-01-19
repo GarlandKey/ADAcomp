@@ -1,8 +1,9 @@
 .Point {
+  background: black;
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
-  height: calc(100vh - 3.6rem);
+  height: 100vh;
   justify-content: space-around;
   width: 100vw;
 }

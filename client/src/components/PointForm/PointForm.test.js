@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ItemForm from './ItemForm';
+import ItemForm from './PointForm';
 
 test('renders learn react link', () => {
   render(<ItemForm />);
