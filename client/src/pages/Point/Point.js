@@ -5,7 +5,18 @@ import PointForm from "../../components/PointForm/PointForm";
 
 const Point = () => {
     return (
-        <div className="Point">
+        <div
+			className="
+				bg-darkest
+				flex
+				flex-row
+				flex-wrap
+				h-full
+				gap-8
+				space-around
+				text-lightest
+				w-full"
+		>
             <TopNav />
             <PointNav />
             <PointForm />

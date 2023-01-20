@@ -1,11 +1,11 @@
 .TopNav {
-  align-items: center;
-  background-color: #282c34;
-  display: flex;
-  flex-flow: row nowrap;
-  height: 6.4rem;
-  justify-content: center;
-  width: calc(100vw - (100vw - 100%));
+   align-items: center;
+   background-color: #282c34;
+   display: flex;
+   flex-flow: row nowrap;
+   height: 6.4rem;
+   justify-content: center;
+   width: calc(100vw - (100vw - 100%));
 }
 
 button {

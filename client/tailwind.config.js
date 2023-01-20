@@ -2,8 +2,9 @@
 
 module.exports = {
 	content: [
-		'./src/**/*.{html,js}',
-		'./public/*.{html,js}',
+		'./src/**/*.{html,jsx,js}',
+		'./src/components/**/*.{html,jsx,js}',
+		'./src/pages/**/*.{html,jsx,js}'
 	],
 	theme: {
 		fontSize: {
@@ -35,7 +36,7 @@ module.exports = {
 			'3xl': ['3.2rem', {
 				lineHeight: '3.6rem',
 				letterSpacing: '0.01rem',
-				fontWeight: '300',
+				fontWeight: '300'
 			}],
 		},
 		extend: {
@@ -48,13 +49,13 @@ module.exports = {
 				'lightest': '#FFFFFF',
 				'azure': '#088FFA',
 				'perrywinkle': '#666BC8',
-				'deeplavender': '#905FB8',
+				'deeplavender': '#905FB8'
 			},
 			fontFamily: {
 				'header': ['Montserrat', 'sans-serif'],
-				'primary': ['Open Sans', 'sans-serif'],
-			},
-		},
+				'primary': ['Open Sans', 'sans-serif']
+			}
+		}
 	},
-	plugins: [],
+	plugins: []
 }

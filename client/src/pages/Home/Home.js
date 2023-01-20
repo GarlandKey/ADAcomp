@@ -61,6 +61,7 @@ const Home = () => {
 					className="
 						font-header
 						font-semibold
+						px-8
 						text-3xl"
 				>
 					Coming to mobile soon!
