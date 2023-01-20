@@ -7,7 +7,7 @@ function OAuth() {
 			<Link to="/Point">
 				<button
 					className="
-						border
+						border-2
 						hover:bg-azure
 						border-azure
 						font-normal
