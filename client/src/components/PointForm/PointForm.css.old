@@ -1,15 +1,15 @@
-.ItemForm {
-
+.PointForm {
+	
 }
 
-.ItemFormIllustration {
+.PointFormIllustration {
   padding: 1rem;
   max-width: 90vw;
   width: 40rem;
 }
 
-.ItemFormComments,
-.ItemFormSolutions {
+.PointFormComments,
+.PointFormSolutions {
   height:5rem;
 }
 
@@ -26,7 +26,7 @@ p {
 
 
 label {
-  align-items: flex-start;
+  align-Points: flex-start;
   display: flex;
   flex-flow: column nowrap;
 }
