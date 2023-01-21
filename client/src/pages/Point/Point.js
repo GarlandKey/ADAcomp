@@ -11,11 +11,11 @@ const Point = () => {
 				flex
 				flex-row
 				flex-wrap
-				h-full
+				h-screen
 				gap-8
 				space-around
 				text-lightest
-				w-full"
+				w-screen"
 		>
             <TopNav />
             <PointNav />
