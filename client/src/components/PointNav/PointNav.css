@@ -1,15 +1,15 @@
 .PointNav aside {
-  align-items: flex-start;
-  background: #282C34;
-  border-radius: 0.8rem;
-  display: flex;
-  height: fit-content;
-  flex-flow: column nowrap;
-  gap: 2rem;
-  justify-content: center;
-  padding: 2rem;
-  text-align: left;
-  width: 30rem;
+  	align-items: flex-start;
+  	background: #282C34;
+  	border-radius: 0.8rem;
+  	display: flex;
+	height: fit-content;
+  	flex-flow: column nowrap;
+  	gap: 2rem;
+  	justify-content: center;
+  	padding: 2rem;
+  	text-align: left;
+  	width: 30rem;
 }
 
 
