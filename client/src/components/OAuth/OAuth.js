@@ -1,5 +1,5 @@
-// import './OAuth.css';
 import {Link} from "react-router-dom";
+import "./OAuth.css";
 
 function OAuth() {
 	return (

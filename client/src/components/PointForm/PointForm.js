@@ -1,5 +1,5 @@
-import placeholder from './img/placeholder.webp';
-// import './PointForm.css';
+import placeholder from "./img/placeholder.webp";
+import "./PointForm.css";
 
 function PointForm() {
   return (

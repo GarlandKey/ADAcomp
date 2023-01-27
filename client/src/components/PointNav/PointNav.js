@@ -1,4 +1,5 @@
 import React from "react";
+import "./PointNav.css";
 
 const PointNav = () => {
 	return (

@@ -1,4 +1,4 @@
-// import './TakePhoto.css';
+import './TakePhoto.css';
 
 function TakePhoto() {
   return (
