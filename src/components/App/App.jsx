@@ -8,7 +8,9 @@ function App() {
 	const [registerPassword, setRegisterPassword] = useState('');
 	const [loginUsername, setLoginUsername] = useState('');
 	const [loginPassword, setLoginPassword] = useState('');
+	const [data, setData] = useState(null);
 	const [count, setCount] = useState(0);
+
 	const register = () => {
 		axios({
 			method: 'POST',
@@ -17,9 +19,10 @@ function App() {
 				password: registerPassword,
 			},
 			withCredentials: true,
-			url: 'http://localhost:4000/register',
+			url: 'http://localhost:5172/register',
 		}).then((res) => console.log(res));
 	};
+
 	const login = () => {
 		axios({
 			method: 'POST',
@@ -28,17 +31,20 @@ function App() {
 				password: loginPassword,
 			},
 			withCredentials: true,
-			url: 'http://localhost:4000/login',
+			url: 'http://localhost:5172/login',
 		}).then((res) => console.log(res));
 	};
+
 	const getUser = () => {
 		axios({
 			method: 'GET',
 			withCredentials: true,
-			url: 'http://localhost:4000/getUser',
-		}).then((res) => console.log(res));
+			url: 'http://localhost:5172/user',
+		}).then((res) => {
+			setData(res.data);
+			console.log(res.data);
+		})
 	};
-
 
 	return (
 		<div className="App">
@@ -59,7 +65,8 @@ function App() {
 			
 			<section>
 				<h1>Get User</h1>
-				<button onClick={{getUser}}>Submit</button>
+				<button onClick={getUser}>Submit</button>
+				{ data ? <h1>Welcome back {data.username}</h1> : null }
 			</section>
 			
 			<div>
